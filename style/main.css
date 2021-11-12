@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #fafafa;
+
+}
+
+.dino{
+    width: 60px;
+    height: 60px;
+    background-image: url('../assets/imgs/dino.png');
+    position: absolute;
+    bottom: 0;
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image: url('../assets/imgs/cactus.png');
+}
+
+.game-over{
+    text-align: center;
+    color: #666;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes slideright{
+    from{
+        background-position: 10000%;
+    }
+
+    to{
+        background-position: 0;
+    }
+}
+
+
+.background{
+    position: absolute;
+    bottom: 0;
+    background-image: url('../assets/imgs/background.png');
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+
+header{
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .controls{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+header .controls .dificult{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.8rem;
+}
+
+header .controls .dificult label{
+    margin-left: -2rem;
+}
+
+header .score{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+header .score #pontos{
+    font-size: 3rem;
+    margin-right: 0.8rem;
+}
+
+header #start{
+    font-size: 2rem;
+    padding: 0.8rem;
+    border: solid rgb(223, 218, 218) 1px;
+    border-radius: 0.5rem;
+    cursor:pointer;
+}
+
+.controls .dificult input{
+    cursor: pointer;
+}
+
+.container-gameover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-gameover .button{
+    font-size: 2rem;
+    padding: 0.8rem;
+    border: solid rgb(223, 218, 218) 1px;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    margin-top: 1rem;
+}
